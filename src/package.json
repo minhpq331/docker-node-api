@@ -1,0 +1,22 @@
+{
+  "name": "docker-node-api",
+  "version": "1.0.0",
+  "description": "NodeJS api development demo with docker",
+  "main": "index.js",
+  "author": "Minh Monmen",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "express": "^4.16.4",
+    "mongoose": "^5.4.1",
+    "pm2": "^3.2.8"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  },
+  "scripts": {
+    "start": "pm2-docker start index.js",
+    "dev": "nodemon index.js",
+    "test": "some test command"
+  }
+}

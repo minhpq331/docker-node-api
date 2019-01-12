@@ -1,0 +1,19 @@
+version: "2"
+services:
+    docker-node-api:
+        container_name: docker_node_api
+        build: .
+        user: "${UID_GID}"
+        volumes:
+            - ./src:/app
+        ports:
+            - "3000:3000"
+        environment:
+            - NODE_ENV=production
+            - PORT=3000
+            - MONGO_URI=mongodb://mongo:27017/test 
+        networks:
+            - persistentstack_common
+networks:
+    persistentstack_common:
+        external: true

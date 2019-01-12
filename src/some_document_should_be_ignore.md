@@ -1,0 +1,1 @@
+This file should be ignore by nodemon, you can edit it and save when nodemon is running

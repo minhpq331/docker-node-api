@@ -1,0 +1,6 @@
+version: "2"
+services:
+    docker-node-api:
+        environment:
+            - NODE_ENV=development
+        command: yarn dev --L
