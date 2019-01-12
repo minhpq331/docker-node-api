@@ -1,5 +1,5 @@
 # Docker node api
-Demo nodejs application development with docker. This repository is the source code for my blog post [Developer hiện đại phần 2: Chạy ứng dụng trên... localhost](https://kipalog.com/posts/Developer-hien-dai-phan-2--Chay-ung-dung-tren----localhost)
+Demo nodejs application development with docker. This repository is the source code for my blog post [Từ phát triển tới triển khai phần 1: Backend, NodeJS, API](https://kipalog.com/posts/Tu-phat-trien-toi-trien-khai-phan-1--Backend--NodeJS--API)
 
 ## How to use
 
@@ -24,10 +24,23 @@ $ echo $(id -u):$(id -g)
 $ script/compose_run.sh yarn
 ```
 
-**Start docker compose**
+**Start developing with**
 
 ```bash
-$ docker-compose up
+$ script/compose_start.sh dev
+```
+
+or run it in production environment:
+
+```bash
+$ script/compose_start.sh
+```
+```
+
+or run it in test environment
+
+```bash
+$ script/compose_start.sh test
 ```
 
 To stop running, press `<Ctrl> + <C>`
@@ -43,5 +56,3 @@ After changing `Dockerfile`, please run this command:
 ```bash
 $ docker-compose build
 ```
-
-After changing your code, please stop your app with `<Ctrl> + <C>` and start over with `docker-compose up`. This behavior will be improved in my next blog.
